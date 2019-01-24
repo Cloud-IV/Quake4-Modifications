@@ -1,1 +1,3 @@
-Exercise 1 required a modification to the rifle/machine gun weapon in Quake 4 to "do something crazy". It also served as an introductory exercise to using Git and Visual Studio for modifying Quake 4. 
+A repository containting the sources files for Quake 4 and branches dedicated to various modifications of Quake 4.
+
+(Branch) Exercise 1: Modification of the rifle weapon to do something crazy.
