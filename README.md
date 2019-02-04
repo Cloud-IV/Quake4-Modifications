@@ -14,7 +14,6 @@ HOW TO INSTALL MODS
 NOTE: For exercise1's mod, you must also download the "weapons" folder located in the "sound" folder of the branch, create a new folder called "sound" in the mod folder that you created, and paste the "weapons" folder into that folder. 
 
 
-BRANCHES
-a) excercise1: Modification of the machine gun to do something crazy. When the machine gun is fired, San's voice plays instead of the normal fire effect, and when the player scopes in with the machine gun, the Metal Gear Solid alert sound is played. 
+BRANCHES                                                                                                                                  excercise1: Modification of the machine gun to do something crazy. When the machine gun is fired, San's voice plays instead of the normal fire effect, and when the player scopes in with the machine gun, the Metal Gear Solid alert sound is played. 
 
-b) midtermProject: Created branch for midterm project. Modifications remain to be decided at future date.
+midtermProject: Created branch for midterm project. Modifications remain to be decided at future date.
