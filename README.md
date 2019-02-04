@@ -15,6 +15,6 @@ NOTE: For exercise1's mod, you must also download the "weapons" folder located i
 
 
 BRANCHES
-excercise1: Modification of the machine gun to do something crazy. When the machine gun is fired, San's voice plays instead of the normal fire effect, and when the player scopes in with the machine gun, the Metal Gear Solid alert sound is played. 
+a) excercise1: Modification of the machine gun to do something crazy. When the machine gun is fired, San's voice plays instead of the normal fire effect, and when the player scopes in with the machine gun, the Metal Gear Solid alert sound is played. 
 
-midtermProject: Created branch for midterm project. Modifications remain to be decided at future date.
+b) midtermProject: Created branch for midterm project. Modifications remain to be decided at future date.
