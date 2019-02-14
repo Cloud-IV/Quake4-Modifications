@@ -16,6 +16,10 @@ NOTE: For exercise1's mod, you must also download the "weapons" folder located i
 
 BRANCHES
 
+<<<<<<< HEAD
 excercise1: Modification of the machine gun to do something crazy. When the machine gun is fired, San's voice plays instead of the normal fire effect, and when the player scopes in with the machine gun, the Metal Gear Solid alert sound is played. 
+=======
+excercise1: Modification of the machine gun to behave like a shotgun. Changes include 8 bullets fired per shot, large spread per shot (at least when not zoomed), clip size of 1 bullet to simulate a pump-action shotgun, massive reduction in viable range, and increased recoil animation time to give the impression of a larger oomph behind each shot. Unrelated sound changes include San's voice from Undertale playing each time the weapon is fired, and the Metal Gear Solid alert sound is played when the player scopes the machinegun. 
+>>>>>>> 52dd719fc7289e885e8467db8c1be148854be6d3
 
 midtermProject: Created branch for midterm project. Modifications remain to be decided at future date.
