@@ -92,8 +92,8 @@ entityDef weapon_machinegun
 	"inv_icon"					"gfx/guis/hud/icons/item_machinegun.tga"
 	"inv_name"					"#str_107406"
 
-	"fireRate"					".1"
-	"spread"					"2"
+	"fireRate"					"1"		//default: 0.1
+	"spread"					"10"		//default: 2
 
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_machinegun"
 	"def_hitscan"				"hitscan_bullet"
@@ -101,8 +101,8 @@ entityDef weapon_machinegun
 	
 	"ammoType"					"ammo_machinegun"
 	"ammoRequired"				"1"
-	"clipSize"					"40"
-	"lowAmmo"					"10"
+	"clipSize"					"1"		//default: 40
+	"lowAmmo"					"0"		//default: 10
 	"gui"						"guis/weapons/machinegun_ammo.gui"
 	"gui2"						"guis/weapons/machinegun_inview_scope.gui"
 
@@ -118,8 +118,8 @@ entityDef weapon_machinegun
 	"ammoRegenStep"				"4"
 	"ammoRegenTime"				"1000"
 
-	"recoilTime"				"145"
-	"recoilAngles"				"10 0 5" //original: "-1 0 0" "up-down left-right rotational"
+	"recoilTime"				"500"	//original: 145
+	"recoilAngles"				"-1 0 0" //original: "up-down left-right rotational"
 	
 	// Mapping of modifications to indexes
   	"def_mod1"					"wpmod_machinegun_ammo"
@@ -342,7 +342,7 @@ model weapon_machinegun_world
 
 entityDef hitscan_bullet
 {
-	"range"						"40000"
+	"range"						"10000"	//original: 40000
 
 	"fx_impact"				"effects/weapons/machinegun/impact_default.fx"
 	"fx_impact_water"			"effects/ambient/splash_smll.fx"
@@ -380,8 +380,8 @@ entityDef hitscan_zoomed_bullet
 entityDef damage_machinegun
 {
 	"inherit"					"damage_bullet"
-	"damage"					"15"
-	"damage_flesh"				"18"
+	"damage"					"12.5"	//original: 15
+	"damage_flesh"				"18.75"	//original: 18
 
 	"deathPush"					"100"
 	"deathPushMin"				"3000 350"
@@ -391,7 +391,7 @@ entityDef damage_machinegun
 entityDef damage_machinegun_flesh
 {
 	"inherit"					"damage_machinegun"
-	"damage"					"18"
+	"damage"					"18.75"	//original: 18
 }
 
 //---------------------------------------------------------------
@@ -400,14 +400,14 @@ entityDef damage_machinegun_flesh
 entityDef damage_machinegun_zoom
 {
 	"inherit"					"damage_machinegun"
-	"damage"					"20"
-	"damage_flesh"				"24"
+	"damage"					"25"	//original: 20
+	"damage_flesh"				"37.5"	//original: 24
 }
 
 entityDef damage_machinegun_zoom_flesh
 {
 	"inherit"					"damage_machinegun"
-	"damage"					"24"
+	"damage"					"135"	//original: 24
 }
 
 //---------------------------------------------------------------
