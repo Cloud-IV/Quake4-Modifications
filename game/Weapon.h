@@ -22,6 +22,7 @@ typedef enum {
 	WP_RISING,
 	WP_LOWERING,
 	WP_FLASHLIGHT,
+	WP_OVERHEATED, //state for overheated weapon
 } weaponStatus_t;
 
 static const int MAX_WEAPONMODS	= 4;

@@ -90,6 +90,7 @@ entityDef weapon_blaster
 	"ammoType"					"ammo_blaster"
 	"clipSize"					"0"
 	"ammoRequired"				"0"
+	"heatLevel"					"0"
 //	"launchFromBarrel"			"1"
 
 	"inv_weapon"				"weapon_blaster"

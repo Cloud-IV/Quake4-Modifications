@@ -32,6 +32,7 @@ private:
 	idVec2				chargeGlow;
 	bool				fireForced;
 	int					fireHeldTime;
+	int					heatLevel; //will hold value for heat
 
 	stateResult_t		State_Raise				( const stateParms_t& parms );
 	stateResult_t		State_Lower				( const stateParms_t& parms );
@@ -40,6 +41,7 @@ private:
 	stateResult_t		State_Charged			( const stateParms_t& parms );
 	stateResult_t		State_Fire				( const stateParms_t& parms );
 	stateResult_t		State_Flashlight		( const stateParms_t& parms );
+	stateResult_t		State_Overheated		( const stateParms_t& parms	); //added overheat state for blaster 
 	
 	CLASS_STATES_PROTOTYPE ( rvWeaponBlaster );
 };
@@ -152,6 +154,7 @@ void rvWeaponBlaster::Spawn ( void ) {
 	chargeGlow   = spawnArgs.GetVec2 ( "chargeGlow" );
 	chargeTime   = SEC2MS ( spawnArgs.GetFloat ( "chargeTime" ) );
 	chargeDelay  = SEC2MS ( spawnArgs.GetFloat ( "chargeDelay" ) );
+	heatLevel	 = spawnArgs.GetInt ( "heatLevel" );
 
 	fireHeldTime		= 0;
 	fireForced			= false;
@@ -225,6 +228,7 @@ CLASS_STATES_DECLARATION ( rvWeaponBlaster )
 	STATE ( "Charged",						rvWeaponBlaster::State_Charged )
 	STATE ( "Fire",							rvWeaponBlaster::State_Fire )
 	STATE ( "Flashlight",					rvWeaponBlaster::State_Flashlight )
+	STATE ( "Overheated",					rvWeaponBlaster::State_Overheated )
 END_CLASS_STATES
 
 /*
@@ -428,10 +432,12 @@ stateResult_t rvWeaponBlaster::State_Fire ( const stateParms_t& parms ) {
 	
 			if ( gameLocal.time - fireHeldTime > chargeTime ) {	
 				Attack ( true, 1, spread, 0, 1.0f );
+				heatLevel += 10;	//increases heat when fired
 				PlayEffect ( "fx_chargedflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "chargedfire", parms.blendFrames );
 			} else {
 				Attack ( false, 1, spread, 0, 1.0f );
+				heatLevel += 10;	//increases heat when fired
 				PlayEffect ( "fx_normalflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "fire", parms.blendFrames );
 			}
@@ -485,3 +491,10 @@ stateResult_t rvWeaponBlaster::State_Flashlight ( const stateParms_t& parms ) {
 	}
 	return SRESULT_ERROR;
 }
+
+/*
+================
+rvWeaponBlaster::State_Overheated
+================
+*/
+stateResult_t rvWeaponBlaster::State_Overheated(const stateParms_t& parms) { return SRESULT_OK; }
