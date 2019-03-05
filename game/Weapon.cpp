@@ -3332,3 +3332,16 @@ void rvWeapon::GetDebugInfo ( debugInfoProc_t proc, void* userData ) {
 	idClass::GetDebugInfo ( proc, userData );
 	proc ( "rvWeapon", "state",	stateThread.GetState()?stateThread.GetState()->state->name : "<none>", userData );
 }
+
+/*
+====================
+rvWeapon::DecayHeat
+====================
+*/
+void rvWeapon::DecayHeat(int heatLevel) {
+	int time = 60;
+	while (heatLevel > 0)
+	{
+		for (int i = time; i > 60; i--) heatLevel -= 5;
+	}
+}

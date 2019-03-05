@@ -214,6 +214,7 @@ public:
 	void				LaunchProjectiles			( idDict& dict, const idVec3& muzzleOrigin, const idMat3& muzzleAxis, int num_projectiles, float spread, float fuseOffset, float power );
 	void				Hitscan						( const idDict& dict, const idVec3& muzzleOrigin, const idMat3& muzzleAxis, int num_hitscans, float spread, float power );
 	void				AlertMonsters				( void );
+	void				DecayHeat					( int heatLevel );	//heat decay function
 
 	// Mods
 	int					GetMods						( void ) const;

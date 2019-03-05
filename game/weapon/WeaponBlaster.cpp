@@ -432,12 +432,24 @@ stateResult_t rvWeaponBlaster::State_Fire ( const stateParms_t& parms ) {
 	
 			if ( gameLocal.time - fireHeldTime > chargeTime ) {	
 				Attack ( true, 1, spread, 0, 1.0f );
-				heatLevel += 10;	//increases heat when fired
+
+				common -> Printf ( "Blaster heat level before shot: %d\n", heatLevel); //debug
+				if ((heatLevel + 10) < 100) heatLevel += 10;	//increases heat when fired
+				else if ((heatLevel + 10) >= 100) heatLevel = 100;
+				common -> Printf ( "Blaster heat level after shot: %d\n", heatLevel);	//debug
+				//DecayHeat(heatLevel);
+
 				PlayEffect ( "fx_chargedflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "chargedfire", parms.blendFrames );
 			} else {
 				Attack ( false, 1, spread, 0, 1.0f );
-				heatLevel += 10;	//increases heat when fired
+
+				common->Printf("Blaster heat level before shot: %d\n", heatLevel); //debug
+				if ((heatLevel + 10) < 100) heatLevel += 10;	//increases heat when fired
+				else if ((heatLevel + 10) >= 100) heatLevel = 100;
+				common->Printf("Blaster heat level after shot: %d\n", heatLevel);	//debug
+				//DecayHeat(heatLevel);
+
 				PlayEffect ( "fx_normalflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "fire", parms.blendFrames );
 			}
