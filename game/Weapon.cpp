@@ -3339,7 +3339,7 @@ rvWeapon::DecayHeat
 ====================
 */
 void rvWeapon::DecayHeat(int heatLevel) {
-	int time = 60;
+	int time = gameLocal.time;
 	while (heatLevel > 0)
 	{
 		for (int i = time; i > 60; i--) heatLevel -= 5;

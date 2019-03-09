@@ -437,7 +437,7 @@ stateResult_t rvWeaponBlaster::State_Fire ( const stateParms_t& parms ) {
 				if ((heatLevel + 10) < 100) heatLevel += 10;	//increases heat when fired
 				else if ((heatLevel + 10) >= 100) heatLevel = 100;
 				common -> Printf ( "Blaster heat level after shot: %d\n", heatLevel);	//debug
-				//DecayHeat(heatLevel);
+				DecayHeat(heatLevel);
 
 				PlayEffect ( "fx_chargedflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "chargedfire", parms.blendFrames );
@@ -448,7 +448,7 @@ stateResult_t rvWeaponBlaster::State_Fire ( const stateParms_t& parms ) {
 				if ((heatLevel + 10) < 100) heatLevel += 10;	//increases heat when fired
 				else if ((heatLevel + 10) >= 100) heatLevel = 100;
 				common->Printf("Blaster heat level after shot: %d\n", heatLevel);	//debug
-				//DecayHeat(heatLevel);
+				DecayHeat(heatLevel);
 
 				PlayEffect ( "fx_normalflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "fire", parms.blendFrames );
