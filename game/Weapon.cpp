@@ -3338,10 +3338,10 @@ void rvWeapon::GetDebugInfo ( debugInfoProc_t proc, void* userData ) {
 rvWeapon::DecayHeat
 ====================
 */
-void rvWeapon::DecayHeat(int heatLevel) {
+void rvWeapon::DecayHeat(int& heatLevel) {
 	int time = gameLocal.time;
 	while (heatLevel > 0)
 	{
-		for (int i = time; i > 60; i--) heatLevel -= 5;
+		for (int i = time; i < time+60; i++) heatLevel -= 5;
 	}
-}
+}	
