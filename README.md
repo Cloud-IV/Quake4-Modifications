@@ -11,11 +11,8 @@ HOW TO INSTALL MODS
 
 5. Download the "def" folder from the same branch and paste it into the folder you just created. 
 
-NOTE: For exercise1's mod, you must also download the "weapons" folder located in the "sound" folder of the branch, create a new folder called "sound" in the mod folder that you created, and paste the "weapons" folder into that folder. 
-
-
-BRANCHES
+MODS
 
 excercise1: Modification of the machine gun to behave like a shotgun. Changes include 8 bullets fired per shot, large spread per shot (at least when not zoomed), clip size of 1 bullet to simulate a pump-action shotgun, massive reduction in viable range, and increased recoil animation time to give the impression of a larger oomph behind each shot. Unrelated sound changes include San's voice from Undertale playing each time the weapon is fired, and the Metal Gear Solid alert sound is played when the player scopes the machinegun.
 
-midtermProject: Created branch for midterm project. Modifications remain to be decided at future date.
+midtermProject: Adds heat mechanics to weapons. Weapons will heat up when shot and will overheat when at a certain level. The player must switch weapons or allow the current weapon to cool down if it becomes overheated. Adds 5 different monster reactions to a player with an overheated weapon, 5 power-ups that affect the heat level and damage of the currently equipped weapon, and gives the player heat-based abilities.
